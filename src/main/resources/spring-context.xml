@@ -23,11 +23,15 @@
     </bean>
 
     <bean id="testFileNameProvider" class="ru.otus.hw1.config.AppProperties">
-        <constructor-arg index="0" value="src/main/resources/questions.csv"/>
+        <constructor-arg index="0" value="questions.csv"/>
     </bean>
 
     <bean id="csvQuestionDao" class="ru.otus.hw1.dao.CsvQuestionDao">
         <constructor-arg index="0" ref="testFileNameProvider"/>
     </bean>
+
+    <!--    <bean id="scvResource" class="org.springframework.core.io.ClassPathResource">-->
+    <!--        <constructor-arg value="questions.csv"/>-->
+    <!--    </bean>-->
 
 </beans>
